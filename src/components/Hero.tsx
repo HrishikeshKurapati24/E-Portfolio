@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
 
                             {/* I'm a text with typewriter effect */}
                             <div className="flex items-start space-x-4">
-                                <span className="text-3xl lg:text-4xl font-medium text-gray-300 leading-tight">I'm a</span>
+                                <span className="text-3xl lg:text-4xl font-medium text-gray-300 leading-tight">I'm an aspiring</span>
                                 <div className="flex-1 max-w-md">
                                     <Typewriter
                                         text={["ML Engineer", "Web Developer", "ML Research Scientist"]}
