@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Resume: React.FC = () => {
-    const resumePath = '/resume.pdf'; // PDF should be placed in public folder
+    const resumePath = `${process.env.PUBLIC_URL}/resume.pdf`; // PDF should be placed in public folder
 
     const handleDownload = () => {
         const link = document.createElement('a');
