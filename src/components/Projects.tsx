@@ -8,6 +8,7 @@ import mentalHealthClassifierBanner from '../assets/images/projects/mentalhealth
 import collabSyncBanner from '../assets/images/projects/collabsync_banner.png';
 import leanFeastImage from '../assets/images/projects/leanfeast_banner.png';
 import cdrpModelArchitecture from '../assets/images/projects/cdrp_banner.png';
+import brainTumorBanner from '../assets/images/projects/brain_tumor_banner.png';
 
 const Projects: React.FC = () => {
     const ref = useRef<HTMLElement>(null);
@@ -79,65 +80,104 @@ const Projects: React.FC = () => {
         {
             id: "CollabSync",
             title: "CollabSync",
-            subtitle: "Influencer Marketing & Campaign Management Platform",
-            description: "A full-stack influencer marketing platform enabling brands, influencers, and customers to manage campaigns, collaborations, and e-commerce workflows.",
-            tags: ["influencer marketing", "brand collaboration", "digital marketing", "social media", "collaboration platform", "brand-influencer partnerships", "E-Commerce"],
+            subtitle: "Multi-Role Influencer Marketing & E-Commerce Platform",
+            description: "A full-stack influencer marketing platform with 170 REST endpoints, 95.3% latency reduction via Redis caching, and a complete campaign-to-e-commerce lifecycle.",
+            tags: ["Full Stack", "Node.js", "React", "MongoDB", "Redis"],
             image: collabSyncBanner,
             link: "#",
             fileName: "CollabSync.exe",
-            detailedDescription: "CollabSync is a robust Influencer Marketing Platform that facilitates end-to-end campaign lifecycles. It enables Brands to discover influencers and manage campaigns with real-time tracking, while Influencers can submit content for approval and manage their deliverables. The platform also integrates a direct-to-consumer e-commerce marketplace, allowing customers to purchase products directly through campaign promotions. Secure role-based access ensures tailored experiences for Brands, Influencers, and Customers.",
+            detailedDescription: `CollabSync is a multi-role influencer marketing platform built on a decoupled full-stack architecture (Node.js + Express.js backend, React frontend). It handles the complete campaign lifecycle — from brand-influencer matchmaking and collaboration management to real-time analytics, subscription billing, and a direct-to-consumer e-commerce layer.
 
+I led a full backend refactor into a layered service architecture (services/, controllers/, routes/) and engineered significant performance improvements: Redis caching cut Brand Dashboard load time by 95.3% (650.5ms → 30.4ms) and Influencer Dashboard by 94.1% (482.1ms → 28.5ms). I also built 170 REST API endpoints, 14 Mongoose models, and authored the entire GitHub Actions CI pipeline covering 154 passing tests across 22 Jest suites.`,
             features: [
-                "End-to-End Campaign Workflow Management",
-                "Direct-to-Consumer E-Commerce Integration",
-                "Real-Time Progress Tracking & Analytics",
-                "Role-Based Portals (Brand, Influencer, Customer)",
-                "Secure Authentication & Subscription Tier Management"
+                "95.3% latency reduction on Brand Dashboard via Redis caching (650ms → 30ms)",
+                "170 REST API endpoints with layered service architecture",
+                "Referral-based product ordering system with full edge-case handling",
+                "GitHub Actions CI/CD: 154 tests across 22 Jest suites",
+                "Real-time WebSocket sync via Supabase Realtime",
+                "Role-Based Access Control (Brand, Influencer, Customer, Admin)"
             ],
-
             technologies: [
-                "React 19",
-                "Redux Toolkit",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "EJS",
-                "JavaScript",
-                "Bootstrap",
-                "Chart.js",
-                "Cloudinary",
-                "bcrypt",
-                "JWT"
+                "React & Redux Toolkit",
+                "Node.js & Express.js",
+                "MongoDB & Mongoose",
+                "Redis (Caching)",
+                "GitHub Actions (CI/CD)",
+                "Jest & Supertest",
+                "JWT & bcrypt",
+                "Cloudinary"
             ],
-
             github: "https://github.com/HrishikeshKurapati24/FFSD-Project",
-
             demo: "https://ffsd-project-six.vercel.app/"
         },
         {
             id: "cdrp-gnn-project",
-            title: "Cancer Drug Response Prediction (CDRP)",
-            subtitle: "Graph Neural Networks for Precision Medicine",
-            description: "A GNN-based deep learning framework that predicts cancer drug response by integrating molecular graphs with multi-omics data.",
-            tags: ["Deep Learning", "Bioinformatics", "Graph Neural Networks", "Python"],
+            title: "FUSE-CDR: Cancer Drug Response Prediction",
+            subtitle: "Heterogeneous GNN Framework for Precision Oncology",
+            description: "A novel heterogeneous graph learning framework predicting cancer drug response with AUC 0.9359 on GDSC, outperforming 5 baseline architectures across 117,330 drug-cell response pairs.",
+            tags: ["Deep Learning", "Bioinformatics", "GNN", "PyTorch Geometric", "Research"],
             image: cdrpModelArchitecture,
             link: "#",
             fileName: "Honors_Project.exe",
-            detailedDescription: "This project addresses the critical challenge of personalized cancer therapy by predicting drug response (IC50) values. The developed model utilizes novel Node Representation Modules to fuse multi-omics data (Genomics, Transcriptomics, Epigenomics) using Cross-Modal Attention and processes drug chemical structures with Graph Isomorphism Networks (GIN). This approach achieves state-of-the-art performance (AUC: 0.9516) on the GDSC and CCLE datasets, significantly outperforming baseline models like GraphCDR in both accuracy and training efficiency.",
+            detailedDescription: `FUSE-CDR (Flexible Unified Sequential Encoding of Omics-based Cancer Drug Response) is a novel heterogeneous graph learning framework for predicting cancer drug responses. It combines biologically-guided multi-omics fusion with a dual-branch GNN architecture (GraphSAGE + HGT), modeling complex relationships between cancer cell-lines and drugs across 7 omics modalities.
+
+Benchmarked on GDSC (456 cell lines, 297 drugs, 117,330 pairs) and CCLE datasets:
+• AUC 0.9359 on GDSC random split (+11.32% vs GADRP, +6.26% vs DeepTTC)
+• AUC 0.8945 on GDSC Unseen Cells (+14.92% vs GraphCDR, +18.78% vs DeepTTC)
+• Strict 5-fold cross-validation across 4 inductive split strategies`,
             features: [
-                "Novel Node Representation Modules for enhanced drug & cell-line embeddings",
-                "Multi-Omics Data Integration (Genomics, Transcriptomics, Epigenomics)",
-                "Graph Isomorphism Network (GIN) for molecular graph processing",
-                "Cross-Modal Attention mechanism for effective feature fusion"
+                "AUC 0.9359 on GDSC — outperforms 5 baseline GNN architectures",
+                "Dual-branch GNN: GraphSAGE (local) + HGT (global) with attention aggregation",
+                "Biologically-guided multi-omics fusion across 7 modalities (Genomics, Epigenomics, Transcriptomics)",
+                "Heterogeneous graph: 117,330 drug-cell pairs on GDSC with Top-k cosine similarity edges",
+                "Supervised Contrastive Learning for representation robustness",
+                "4 strict inductive benchmarking splits (Random, Unseen Cells, Unseen Drugs, Unseen Both)"
             ],
             technologies: [
-                "PyTorch",
-                "PyTorch Geometric",
-                "RDKit",
-                "DeepChem",
-                "Scikit-Learn"
+                "PyTorch & PyTorch Geometric",
+                "GraphSAGE & HGT",
+                "RDKit & DeepChem",
+                "scikit-learn",
+                "GDSC & CCLE Datasets"
             ],
             github: "https://github.com/HrishikeshKurapati24/Honors_Project",
+            demo: "#"
+        },
+        {
+            id: "brain-tumor-segmentation",
+            title: "3D Brain Tumor Segmentation",
+            subtitle: "ResUNet3D with Learnable Fusion on BraTS 2021",
+            description: "A 3D medical image segmentation framework achieving Macro Dice 0.8292 (+21% over baseline) by combining a ResUNet3D backbone with a learnable multimodal fusion module trained on BraTS 2021.",
+            tags: ["Deep Learning", "Medical Imaging", "PyTorch", "3D Segmentation", "Research"],
+            image: brainTumorBanner,
+            link: "#",
+            fileName: "BrainTumorSeg.exe",
+            detailedDescription: `An advanced 3D brain tumor segmentation framework leveraging a Learnable Weighted Fusion Module integrated with a 3D Residual U-Net (ResUNet3D) backbone, trained and evaluated on the BraTS 2021 dataset.
+
+Key results:
+• Macro Tumor Dice: 0.8292 (+21% over baseline 0.6851)
+• Tumor Core (TC) Dice: 0.9056 (baseline: 0.8504)
+• Enhancing Tumor (ET) Dice: 0.8430 (+13.6% via Combined Dice+Focal Loss)
+• Whole Tumor (WT) Dice: 0.8563
+
+I independently implemented the ResUNet3D backbone, custom Combined Dice+Focal Loss, AMP-based training pipeline, and the evaluation engine — trained within 16GB VRAM constraints on Kaggle T4 GPUs using gradient accumulation.`,
+            features: [
+                "Macro Dice 0.8292 — +21% over ResUNet3D baseline via Learnable Fusion",
+                "Tumor Core Dice 0.9056 using Learnable Softmax-Weighted Fusion of 4 MRI modalities",
+                "+13.6% Enhancing Tumor accuracy with Combined Dice + Focal Loss",
+                "PyTorch AMP + 4-step Gradient Accumulation within 16GB VRAM (Kaggle T4)",
+                "Ablation studies: ResUNet skip connections vs CNN, Learnable vs Mean Fusion",
+                "Tumor-Centric 3D patch sampler on 98³ voxel volumes"
+            ],
+            technologies: [
+                "PyTorch & CUDA",
+                "ResUNet3D Backbone",
+                "Automatic Mixed Precision (AMP)",
+                "scikit-learn",
+                "Matplotlib",
+                "BraTS 2021 Dataset"
+            ],
+            github: "https://github.com/HrishikeshKurapati24/Brain-tumor-segmentation-using-Learnable-ResUnet-3D",
             demo: "#"
         }
     ];

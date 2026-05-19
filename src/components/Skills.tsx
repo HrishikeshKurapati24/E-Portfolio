@@ -47,36 +47,43 @@ const Skills: React.FC = () => {
             id: 'backend',
             title: 'Backend & APIs',
             icon: Server,
-            skills: ['Node.js', 'FastAPI', 'REST', 'GraphQL', 'Supabase'],
+            skills: ['Node.js', 'FastAPI', 'Express.js', 'REST APIs', 'WebSockets', 'JWT / Auth'],
             color: 'text-green-400'
         },
         {
             id: 'frontend',
             title: 'Frontend & UI',
             icon: Layout,
-            skills: ['React', 'Tailwind CSS', 'Framer Motion', 'HTML/CSS'],
+            skills: ['React.js', 'Redux Toolkit', 'Vite', 'Tailwind CSS', 'Framer Motion'],
             color: 'text-purple-400'
         },
         {
             id: 'data',
-            title: 'Data & Databases',
+            title: 'Databases & Storage',
             icon: Database,
-            skills: ['PostgreSQL', 'MongoDB', 'Pandas', 'NumPy'],
+            skills: ['PostgreSQL', 'MongoDB', 'Redis', 'Supabase', 'Pinecone'],
             color: 'text-blue-400'
         },
         {
             id: 'ml',
-            title: 'Machine Learning & AI',
+            title: 'AI & Deep Learning',
             icon: Brain,
-            skills: ['PyTorch', 'Scikit-learn', 'Transformers', 'Hugging Face', 'GNNs'],
+            skills: ['PyTorch', 'Hugging Face Transformers', 'LangChain', 'RAG', 'Fine-tuning LLMs', 'SHAP (XAI)', 'Supervised Contrastive Learning'],
             color: 'text-green-400'
         },
         {
-            id: 'tools',
-            title: 'Tools & Collaboration',
+            id: 'research',
+            title: 'Research & Specialisms',
             icon: PenTool,
-            skills: ['Git', 'GitHub', 'Docker', 'Postman', 'Linux'],
+            skills: ['Graph Neural Networks', 'PyTorch Geometric', 'RDKit / DeepChem', 'Multi-Omics Processing', '3D Medical Segmentation', 'scikit-learn'],
             color: 'text-purple-400'
+        },
+        {
+            id: 'devops',
+            title: 'DevOps & Deployment',
+            icon: Code,
+            skills: ['Docker', 'GitHub Actions (CI/CD)', 'Vercel', 'Render', 'Hugging Face Spaces', 'Git'],
+            color: 'text-blue-400'
         }
     ];
 

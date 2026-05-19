@@ -69,17 +69,17 @@ const Hero: React.FC = () => {
 
                         <div className="space-y-2">
                             <p className="text-2xl lg:text-3xl text-gray-300 font-medium">
-                                Software Engineer building end-to-end systems
+                                Full-Stack & AI Engineer building intelligent, production-grade systems
                             </p>
 
                             <div className="flex items-baseline gap-3">
                                 <span className="text-lg text-gray-400">Across</span>
                                 <Typewriter
                                     text={[
+                                        'Full-Stack',
+                                        'AI Engineering',
                                         'Backend',
-                                        'Full-stack',
-                                        'Applied AI',
-                                        'System-driven applications',
+                                        'Bioinformatics Research',
                                     ]}
                                     speed={70}
                                     deleteSpeed={40}
@@ -92,8 +92,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         <p className="text-lg text-gray-400 max-w-xl">
-                            I focus on strong fundamentals, clean design, and consistent
-                            execution — building systems that scale beyond demos.
+                            Building at the intersection of software engineering and machine learning — from LLM-powered platforms and deep learning systems to graph-based research frameworks across healthcare, bioinformatics, and consumer domains.
                         </p>
 
                         <div className="flex items-center gap-4">

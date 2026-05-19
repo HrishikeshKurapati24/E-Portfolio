@@ -1,7 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { fadeUp } from '../motion.config';
-import { Mail, Linkedin, Twitter, Instagram, ArrowUp } from 'lucide-react';
+import { Mail, Linkedin, Github, ArrowUp } from 'lucide-react';
+
+const HuggingFaceIcon = () => (
+    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm0 2c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm-3.5 6.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5S10 11.828 10 11s-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5S17 11.828 17 11s-.672-1.5-1.5-1.5zM8.5 15c-.276 0-.5.224-.5.5 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.276-.224-.5-.5-.5h-6z"/>
+    </svg>
+);
 
 const Contact: React.FC = () => {
     const containerRef = useRef(null);
@@ -18,14 +24,14 @@ const Contact: React.FC = () => {
             icon: <Linkedin className="w-5 h-5" />
         },
         {
-            name: 'Twitter',
-            url: 'https://x.com/HrishikeshK245',
-            icon: <Twitter className="w-5 h-5" />
+            name: 'GitHub',
+            url: 'https://github.com/HrishikeshKurapati24',
+            icon: <Github className="w-5 h-5" />
         },
         {
-            name: 'Instagram',
-            url: 'https://instagram.com/hrishikesh_kurapati/',
-            icon: <Instagram className="w-5 h-5" />
+            name: 'Hugging Face',
+            url: 'https://huggingface.co/Hrishikesh4',
+            icon: <HuggingFaceIcon />
         }
     ];
 
@@ -41,13 +47,13 @@ const Contact: React.FC = () => {
                         className="max-w-2xl"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            Ready to build scalable <br />
-                            <span className="text-gray-500">end-to-end systems?</span>
+                            Let's build something <br />
+                            <span className="text-gray-500">that actually matters.</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-8 max-w-xl">
-                            I am currently open to full-time opportunities where I can contribute to
-                            engineering teams solving complex problems. If you're hiring for
-                            technical roles, let's connect.
+                            I'm open to internships and full-time roles in AI engineering, full-stack development,
+                            or applied ML research. If you're working on hard problems and want someone who ships
+                            end-to-end — let's talk.
                         </p>
                         <a
                             href="mailto:hrishikesh.kurapati@gmail.com"

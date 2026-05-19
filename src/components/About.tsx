@@ -10,17 +10,17 @@ const About: React.FC = () => {
         {
             icon: <Terminal className="w-6 h-6 text-primary" />,
             title: "Full-Stack Architecture",
-            description: "Building systems with clear data flow & maintainable patterns"
+            description: "Decoupled SPAs with React & FastAPI/Node.js, backed by PostgreSQL and MongoDB with strict schema design"
         },
         {
             icon: <Cpu className="w-6 h-6 text-primary" />,
-            title: "Intelligent Systems",
-            description: "Applying AI/ML where it adds tangible value"
+            title: "AI & Deep Learning",
+            description: "RAG pipelines, fine-tuned Longformer models, GNN-based drug response prediction, and 3D medical image segmentation"
         },
         {
             icon: <Database className="w-6 h-6 text-primary" />,
-            title: "Scalable Backend",
-            description: "Designing reliable APIs and database schemas"
+            title: "Production Engineering",
+            description: "CI/CD with GitHub Actions, Docker, real-time WebSockets, and cloud deployments on Vercel, Render & Hugging Face Spaces"
         }
     ];
 
@@ -48,14 +48,10 @@ const About: React.FC = () => {
 
                         <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                             <p>
-                                I’m a software engineer with strong core fundamentals and hands-on
-                                experience building end-to-end systems that combine backend logic,
-                                frontend interfaces, and intelligent components.
+                                I'm a full-stack and AI engineer focused on building robust, intelligent, and user-centric systems at the intersection of software engineering and machine learning.
                             </p>
                             <p>
-                                I focus on designing structured, reliable solutions rather than isolated
-                                features. My goal is to bridge the gap between complex machine learning models
-                                and practical, user-centric applications.
+                                I'm passionate about designing scalable products that solve meaningful real-world problems — from LLM-powered web platforms and fine-tuned transformer models to GNN-based bioinformatics research and 3D medical imaging systems.
                             </p>
                         </div>
 
