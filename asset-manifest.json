@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.f5715e72.css",
-    "main.js": "./static/js/main.5c89c2c6.js",
+    "main.js": "./static/js/main.e44a2619.js",
     "static/js/555.ed47cd0c.chunk.js": "./static/js/555.ed47cd0c.chunk.js",
     "static/js/458.6ef82713.chunk.js": "./static/js/458.6ef82713.chunk.js",
     "static/js/847.4e621e09.chunk.js": "./static/js/847.4e621e09.chunk.js",
@@ -14,10 +14,11 @@
     "static/media/leanfeast_banner.png": "./static/media/leanfeast_banner.962b67d140b9740e4d8f.png",
     "static/media/collabsync_banner.png": "./static/media/collabsync_banner.7547a3500367e3a9e58e.png",
     "static/media/cdrp_banner.png": "./static/media/cdrp_banner.f5af5ed4852c13a00bac.png",
+    "static/media/brain_tumor_banner.png": "./static/media/brain_tumor_banner.157e9a75b61510acbd44.png",
     "static/media/mentalhealthclassifier_banner.png": "./static/media/mentalhealthclassifier_banner.94e08541d27ca8a4b033.png",
     "index.html": "./index.html",
     "main.f5715e72.css.map": "./static/css/main.f5715e72.css.map",
-    "main.5c89c2c6.js.map": "./static/js/main.5c89c2c6.js.map",
+    "main.e44a2619.js.map": "./static/js/main.e44a2619.js.map",
     "555.ed47cd0c.chunk.js.map": "./static/js/555.ed47cd0c.chunk.js.map",
     "458.6ef82713.chunk.js.map": "./static/js/458.6ef82713.chunk.js.map",
     "847.4e621e09.chunk.js.map": "./static/js/847.4e621e09.chunk.js.map",
@@ -30,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.f5715e72.css",
-    "static/js/main.5c89c2c6.js"
+    "static/js/main.e44a2619.js"
   ]
 }
